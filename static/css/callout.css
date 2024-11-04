@@ -1,0 +1,18 @@
+.callout {
+  display: flex;
+  align-items: flex-start;
+  margin: 1em 0;
+  padding: 1em;
+  border-left: 4px solid #f0c419; /* Customize color as needed */
+  background-color: #f9f9f9; /* Customize background */
+  border-radius: 4px;
+}
+
+.callout-icon {
+  font-size: 1.5em; /* Adjust icon size */
+  margin-right: 0.5em;
+}
+
+.callout-content {
+  flex: 1;
+}
