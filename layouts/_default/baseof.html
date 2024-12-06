@@ -9,6 +9,7 @@
     <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
     <!-- added AH -->    
     <link rel="stylesheet" href="{{ "css/callout.css" | relURL }}">
+    {{ partial "plausible_head.html" . }}
     {{ hugo.Generator }}
     {{ $production := hugo.IsProduction }}
     {{ $public := not .Params.private }}
