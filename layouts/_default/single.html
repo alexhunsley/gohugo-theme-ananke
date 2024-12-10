@@ -12,7 +12,12 @@
           CurrentSection allows us to use the section title instead of inferring from the folder.
           https://gohugo.io/variables/page/#section-variables-and-methods
           */}}
-        {{ .CurrentSection.Title }}
+          {{/* 
+          AH: only show "Posts" page type text (and not Pages or Contents)
+          */}}
+          {{ if eq .CurrentSection.Title "Posts" }}
+            {{ .CurrentSection.Title }}
+          {{ end }}
       </aside>
       {{- partialCached "social/share.html" . . -}}
       <h1 class="f1 athelas mt3 mb1">
