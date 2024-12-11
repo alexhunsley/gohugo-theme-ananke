@@ -27,11 +27,11 @@
 
 .clock-row {
   display: flex;
-  justify-content: center; /* Center clocks horizontally */
+  flex-wrap: wrap;
   gap: 20px; /* Add space between the clocks */
+  justify-content: center; /* Center clocks horizontally */
 }
 
 .clock-container {
   flex: 0 0 auto; /* Prevent clocks from stretching */
 }
-
