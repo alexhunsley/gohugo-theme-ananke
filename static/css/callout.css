@@ -16,3 +16,11 @@
 .callout-content {
   flex: 1;
 }
+
+/* spacing in tables */
+
+.spaced-columns-table td, 
+.spaced-columns-table th {
+    padding: 2px 15px;
+}
+
