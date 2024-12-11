@@ -8,7 +8,11 @@
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
     <!-- added AH -->    
-    <link rel="stylesheet" href="{{ "css/callout.css" | relURL }}">
+    {{ $css := resources.Get "callout.css" }}
+    {{ $minifiedCSS := $css | resources.Minify }}
+    {{ $secureCSS := $minifiedCSS | resources.Fingerprint "sha512" }}
+    <link rel="stylesheet" href="{{ $secureCSS.Permalink }}">
+
     {{ partial "plausible_head.html" . }}
     {{ hugo.Generator }}
     {{ $production := hugo.IsProduction }}
