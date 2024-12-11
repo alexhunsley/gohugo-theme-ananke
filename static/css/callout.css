@@ -24,3 +24,14 @@
     padding: 2px 15px;
 }
 
+
+.clock-row {
+  display: flex;
+  justify-content: center; /* Center clocks horizontally */
+  gap: 20px; /* Add space between the clocks */
+}
+
+.clock-container {
+  flex: 0 0 auto; /* Prevent clocks from stretching */
+}
+
