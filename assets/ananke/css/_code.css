@@ -33,3 +33,8 @@ h1 code {
   font-size: 2rem;
   line-height: 2;
 }
+
+h2 code {
+  font-size: 1.6rem;
+  line-height: 2;
+}
