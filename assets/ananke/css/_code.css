@@ -22,3 +22,14 @@ pre {
   hyphens: none;
   position: relative;
 }
+
+
+p code {
+  font-size: 1.05rem;
+  line-height: 2;
+}
+
+h1 code {
+  font-size: 2rem;
+  line-height: 2;
+}
