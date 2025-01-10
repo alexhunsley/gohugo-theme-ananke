@@ -13,7 +13,7 @@
     {{ $section := where $.Site.RegularPages "Section" "in" $section_name }}
     {{ $section_count := len $section }}
     {{ if ge $section_count 1 }}
-      <div class="pa3 pa4-ns w-100 w-70-ns center">
+      <div class="pa3 pa4-ns w-100 w-70-ns center the-index-ah">
         {{/* Use $section_name to get the section title. Use "with" to only show it if it exists */}}
         {{ with $.Site.GetPage "section" $section_name }}
             <h1 class="flex-none">

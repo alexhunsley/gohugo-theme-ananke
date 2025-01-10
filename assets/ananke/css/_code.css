@@ -38,3 +38,9 @@ h2 code {
   font-size: 1.6rem;
   line-height: 2;
 }
+
+.the-index-ah p code {
+  font-size: 0.9rem;
+  line-height: 2;
+}
+
