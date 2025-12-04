@@ -53,6 +53,13 @@
       {{ end }}
     </header>
     <div class="nested-copy-line-height lh-copy {{ $.Param "post_content_classes"  | default "serif"}} f4 nested-links {{ $.Param "text_color" | default "mid-gray" }} {{ cond (eq $.Site.Language.LanguageDirection "rtl") "pl4-l" "pr4-l" }}">
+
+<!-- AH draft indicator -->
+      {{ if .Site.BuildDrafts }}
+      {{ if .Draft }}<div style="border: 2px solid orange; padding: 0.75rem; margin: 1rem 0;"><em>This is a draft post</em></div>{{ end }}
+      {{ end }}
+<!-- AH (end draft indicator) -->
+
       {{- .Content -}}
       {{- partial "tags.html" . -}}
       <div class="mt6 instapaper_ignoref">
